@@ -13,16 +13,18 @@ export CFLAGS= -c -Wall -O3
 
 export ROOT=$(CURDIR)
 
+export LIBCFLIE_DIR = $(ROOT)/libcflie
+
 ###################################################
 #directory for object files
 OBJDIR := build
 
 #include directories
 CFLAGS += -I$(ROOT)
-CFLAGS += -I$(ROOT)/libcflie/include/cflie
+CFLAGS += -I$(LIBCFLIE_DIR)/include/cflie
 
 #library directories
-LDFLAGS += -L$(ROOT)/libcflie/lib
+LDFLAGS += -L$(LIBCFLIE_DIR)/lib
 
 #source files
 SOURCES = example-logging.c CCrazyRadioWrapper.cpp CCrazyflieWrapper.cpp
